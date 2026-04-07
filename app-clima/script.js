@@ -29,8 +29,8 @@ async function getWeather() {
     resultado.innerHTML = `
         <div class="card">
           <h2>${w.name}</h2>
-          <p> Temperature: ${w.main.temp}</p>
-          <p> Description: ${w.weather[0].description}</p>
+          <p>🌡️ Temperature: ${w.main.temp}</p>
+          <p>☁️ Description: ${w.weather[0].description}</p>
           <p>💧 Humedad: ${data.main.humidity}%</p>
           <p>💨 Viento: ${data.wind.speed} m/s</p>
         </div>
