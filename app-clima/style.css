@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Victor Mono Nerd Font', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #7c7ceb;
+background: linear-gradient(309deg,rgba(124, 124, 235, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    flex-direction: column;
+}
+
+.container {
+    width: 320px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: rgb(63, 63, 63);
+}
+
+.container input:focus,
+.container button:focus {
+  box-shadow: 0 0 0 3px rgba(124, 124, 235, 0.4);
+}
+
+#city {
+    font-size: 17px;
+    color: rgb(63, 63, 63);
+}
+
+.container input, button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+#toggleTheme {
+    background-color: rgb(83, 83, 83);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btnBuscar {
+    background-color: rgb(83, 83, 83);
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+
+}
+
+.card {
+    line-height: 1.5;
+    margin: 20px 0;
+    padding: 26px 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: rgb(63, 63, 63);
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.dark {
+    background: #29293b;
+background: linear-gradient(309deg,rgba(41, 41, 59, 1) 0%, rgba(30, 84, 109, 1) 49%, rgba(22, 119, 149, 1) 100%, rgba(0, 212, 255, 1) 71%);
+    color: white;
+}
+
+.dark .container {
+    background: #29293b;
+background: linear-gradient(309deg,rgba(41, 41, 59, 1) 0%, rgba(30, 84, 109, 1) 49%, rgba(22, 119, 149, 1) 100%, rgba(0, 212, 255, 1) 71%);
+    color: white;
+}
+
+.dark .card {
+    background: #29293b;
+background: linear-gradient(309deg,rgba(41, 41, 59, 1) 0%, rgba(30, 84, 109, 1) 49%, rgba(22, 119, 149, 1) 100%, rgba(0, 212, 255, 1) 71%);
+    color: white;
+}
+
+.dark .container input, button {
+    background-color: rgb(184, 184, 184);
+    color: rgb(68, 68, 68);
+}
+
+.dark #toggleTheme, .dark #btnBuscar {
+    background-color: rgb(184, 184, 184);
+    color: rgb(68, 68, 68);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeUp 0.8s ease-out;
+}
+
+@keyframes fadeInResult {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#resultado {
+  animation: fadeInResult 0.5s ease;
+}
+
+body, .container, input, button {
+  transition: 
+    background 0.5s ease,
+    color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+@keyframes buttonPress {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
+
+button:active {
+  animation: buttonPress 0.1s ease;
+}
